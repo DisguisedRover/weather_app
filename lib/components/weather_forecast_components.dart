@@ -17,7 +17,7 @@ class WeatherForecast extends StatelessWidget {
       children: [
         const SizedBox(height: 20),
         Text(
-          '5-Day Forecast',
+          'Weather Forecast',
           style: TextStyle(
             color: Colors.white.withOpacity(0.9),
             fontSize: 20,
