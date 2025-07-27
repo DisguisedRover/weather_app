@@ -3,31 +3,31 @@ import 'package:permission_handler/permission_handler.dart';
 
 class GpsService {
   /// Checks and requests location permissions if needed.
-  Future<bool> _checkPermissions() async {
-    LocationPermission permission = await Geolocator.checkPermission();
+  // Future<bool> _checkPermissions() async {
+  //   LocationPermission permission = await Geolocator.checkPermission();
 
-    if (permission == LocationPermission.denied) {
-      permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied) {
-        return false; // Permissions denied
-      }
-    }
+  //   if (permission == LocationPermission.denied) {
+  //     permission = await Geolocator.requestPermission();
+  //     if (permission == LocationPermission.denied) {
+  //       return false; // Permissions denied
+  //     }
+  //   }
 
-    if (permission == LocationPermission.deniedForever) {
-      return false; // Permissions denied forever
-    }
+  //   if (permission == LocationPermission.deniedForever) {
+  //     return false; // Permissions denied forever
+  //   }
 
-    return true; // Permissions granted
-  }
+  //   return true; // Permissions granted
+  // }
 
-  /// Ensures location services are enabled.
-  Future<bool> _checkLocationService() async {
-    bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
-    if (!serviceEnabled) {
-      return false;
-    }
-    return true;
-  }
+  // /// Ensures location services are enabled.
+  // Future<bool> _checkLocationService() async {
+  //   bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
+  //   if (!serviceEnabled) {
+  //     return false;
+  //   }
+  //   return true;
+  // }
 
   Future<bool> requestLocationPermission() async {
     // Request both location permissions

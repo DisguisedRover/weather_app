@@ -3,6 +3,8 @@ import 'package:intl/intl.dart';
 
 import 'package:weather_app/model/weather_model.dart';
 
+import '../constants/constants.dart';
+
 class WeatherCard extends StatelessWidget {
   final WeatherInfo weather;
   final bool isDetailed;
@@ -58,7 +60,7 @@ class WeatherCard extends StatelessWidget {
                   ],
                 ),
                 Image.network(
-                  'https://openweathermap.org/img/w/${weather.icon}.png',
+                  weatherIconUrl(weather.icon),
                   scale: 0.5,
                 ),
               ],

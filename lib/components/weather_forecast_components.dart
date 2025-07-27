@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:weather_app/constants/constants.dart';
 import '../model/weather_model.dart';
 
 class WeatherForecast extends StatelessWidget {
@@ -87,7 +88,7 @@ class ForecastCard extends StatelessWidget {
                 ),
               ),
               Image.network(
-                'https://openweathermap.org/img/w/${weather.icon}.png',
+                weatherIconUrl(weather.icon),
                 scale: 1.5,
               ),
               Text(
